@@ -11,6 +11,7 @@ services:
     environment:
       - SPARK_LOCAL_IP=spark-master
       - SPARK_WORKLOAD=master
+    container_name: spark-master
   spark-worker-1:
     image: apache-spark-instance
     ports:
@@ -29,6 +30,7 @@ services:
     volumes:
        - ./apps:/opt/apps
        - ./data:/opt/data
+    container_name: spark-worker-1
   spark-worker-2:
     image: apache-spark-instance
     ports:
@@ -47,4 +49,4 @@ services:
     volumes:
         - ./apps:/opt/apps
         - ./data:/opt/data
- 
+    container_name: spark-worker-2

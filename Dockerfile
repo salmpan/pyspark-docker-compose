@@ -1,7 +1,7 @@
 FROM openjdk:11.0.11-jre-slim-buster as builder
 
 # Add Dependencies for PySpark
-RUN apt-get update && apt-get install -y wget software-properties-common ssh net-tools ca-certificates python3 python3-pip
+RUN apt-get update && apt-get install -y git wget software-properties-common ssh net-tools ca-certificates python3 python3-pip
 
 ENV SPARK_VERSION=3.2.0 \
 HADOOP_VERSION=3.2 \

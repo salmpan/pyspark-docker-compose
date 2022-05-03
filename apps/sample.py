@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 def init_spark():
     sql = SparkSession.builder\
-        .appName("dummy-app")\
+        .appName("sample-app")\
         .getOrCreate()
     sc = sql.sparkContext
     return sql, sc
